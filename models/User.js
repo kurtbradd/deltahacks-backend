@@ -22,7 +22,7 @@ var userSchema = new mongoose.Schema({
   emailVerificationToken: String,
   isAdmin: {
     type: Boolean,
-    default: false;
+    default: false
   },
   signUpDate: {
     type: Date,
@@ -100,4 +100,5 @@ userSchema.virtual('fullName').get(function () {
   return this.firstName + ' ' + this.lastName;
 });
 
+console.log('User Model Loaded');
 module.exports = mongoose.model('User', userSchema);
