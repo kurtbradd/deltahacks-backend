@@ -12,7 +12,7 @@ _Hackathon registration system built on Node, Express, Angular, MongoDB, Redis. 
 
 _To run application, follow these steps._
 
-1. Create 'secrets.js' in _/config_ directory
+- Create 'secrets.js' in _/config_ directory
 ```javascript
 module.exports = {
     mongo: {
@@ -32,21 +32,21 @@ module.exports = {
     sessionSecret: 'SOMELONGSESSIONSECRETHEREFORJWT'
 }
 ```
-2. Install NPM project dependencies
+- Install NPM project dependencies
 ```bash
 $ cd deltahacks
 $ sudo npm install
 ```
-3. Install _nodemon_ globally via NPM to watch for file changes
+- Install _nodemon_ globally via NPM to watch for file changes
 ```bash
 $ sudo npm install nodemon -g
 ```
-4. Start MongoDB and Redis with respective config from _secrets.js_
+- Start MongoDB and Redis with respective config from _secrets.js_
 ```bash
 $ sudo service mongod start
 $ sudo service redis-server start
 ```
-5. Start _deltahacks_ Node application
+- Start _deltahacks_ Node application
 ```bash
 $ npm start
 ```
