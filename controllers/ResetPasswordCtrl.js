@@ -28,8 +28,4 @@ router.post('/reset/:token', function (req, res) {
   res.status(200).send('success updated password');
 });
 
-router.all('*', function (req, res) {
-  res.redirect('/');
-})
-
 module.exports = router;
