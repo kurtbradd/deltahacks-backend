@@ -12,5 +12,5 @@ module.exports = function () {
   connection.on('connected', function () {
     console.log('Mongoose Connected');
   })
-  return mongoose;
+  return connection;
 }
