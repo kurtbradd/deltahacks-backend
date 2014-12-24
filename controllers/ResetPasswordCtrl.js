@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-console.log('SessionsCtrl Loaded');
+console.log('ResetPasswordCtrl Loaded');
 
 router.post('/', function (req, res) {
   // verify user email, create reset token & expiry date
