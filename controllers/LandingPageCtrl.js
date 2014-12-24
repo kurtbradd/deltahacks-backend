@@ -5,7 +5,8 @@ console.log('LandingPageCtrl Loaded');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  // Send Angular app to client
+  res.render('index.html');
 });
 
 module.exports = router;
