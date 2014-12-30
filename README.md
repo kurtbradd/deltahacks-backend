@@ -20,7 +20,10 @@ module.exports = {
         host: 'yourhost',
         port: 'port',
         db: 'dbName',
-        password: 'CREATE SOME PASSWORD HERE'
+        password: 'CREATE SOME PASSWORD HERE',
+        options: {
+            db: {safe:true}
+        }
     },
     redis:{
         url: 'redis://yourhost:port/yourDBNumber',
