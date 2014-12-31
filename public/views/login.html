@@ -1,2 +1,12 @@
 <h2>Login Page</h2>
 <button type="button" ui-sref='landingpage' class='btn btn-info btn-sm'>LandingPage</button>
+
+<form class="form-horizontal" role="form" name="loginForm" ng-submit="login(loginForm.$valid)">
+  <div form-field bind-to="fields.email" form-title="Email"></div>
+  <div form-field bind-to="fields.password" form-title="Password"></div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" value="save" class="btn btn-success">Login</button>
+    </div>
+  </div>
+</form>
