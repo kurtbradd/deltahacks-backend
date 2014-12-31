@@ -3,7 +3,7 @@ var module = angular.module('deltahacks.directives', []);
 app.directive('formField', function($compile) {
 	return {
 		replace: true,
-		template: '<div></div>',
+		// template: '<div></div>',
 		link: function(scope, iElem, iAttrs) {				
 				var input = '<input class="form-control"' +
 				'name="' + iAttrs['bindTo'] + '" ' +
