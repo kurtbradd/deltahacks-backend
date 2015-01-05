@@ -15,8 +15,9 @@ app.run(['$rootScope', '$state', '$stateParams', '$window','AuthenticationServic
  		function (event, toState, toParams, fromState, fromParams) {
  			if(toState.data != undefined && toState.data.access != undefined
  				&& !AuthenticationService.isAuthenticated && !$window.sessionStorage.token) {
+ 				event.preventDefault();
  				$state.go('login');
- 			}		
+ 			}	
 		});
 }])
 
