@@ -10,9 +10,11 @@ app.run(['$rootScope', '$state', '$stateParams', '$window','AuthenticationServic
 	// Add references to $state and $stateParams on the $rootScope
 	$rootScope.$state = $state;
 	$rootScope.$stateParams = $stateParams;
-
- 	$rootScope.$on("$stateChangeStart", 
- 		function (event, toState, toParams, fromState, fromParams) {
+		// console.log('Auth Service '+JSON.stringify(AuthenticationService));
+ 	// 	console.log('sessionStorage ' + JSON.stringify($window.sessionStorage));
+ 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
+ 			console.log('Auth Service '+JSON.stringify(AuthenticationService));
+	 		console.log('sessionStorage ' + JSON.stringify($window.sessionStorage));
  			if(toState.data != undefined && toState.data.access != undefined
  				&& !AuthenticationService.isAuthenticated && !$window.sessionStorage.token) {
  				event.preventDefault();

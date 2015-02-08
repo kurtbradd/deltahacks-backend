@@ -85,12 +85,12 @@ module.factory('UserService', ['$http', 'AuthenticationService',
 }]);
 
 module.factory('AuthenticationService', ['$window', function ($window) {
-  var isAuthenticated = false;
-  var isAdmin = false;
-  var currentUser = {};
+  var _isAuthenticated = false;
+  var _isAdmin = false;
+  var _currentUser = {};
   return {
-    isAuthenticated: isAuthenticated,
-    isAdmin: isAdmin,
+    isAuthenticated: _isAuthenticated,
+    isAdmin: _isAdmin,
     authorize: function (accessLevel) {
       return accessLevel == user.accessLevel;
     },
@@ -98,13 +98,13 @@ module.factory('AuthenticationService', ['$window', function ($window) {
       $window.sessionStorage.token = token;
     },
     storeNewUser: function (user) {
-      isAuthenticated = true;
-      isAdmin = user.isAdmin;
+      _isAuthenticated = true;
+      _isAdmin = user.isAdmin;
       currentUser = user;
     },
     logout: function () {
-      isAuthenticated = false;
-      isAdmin = false;
+      _isAuthenticated = false;
+      _isAdmin = false;
       currentUser = {};
       delete $window.sessionStorage.token;
     }

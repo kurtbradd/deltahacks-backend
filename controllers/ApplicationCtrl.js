@@ -33,6 +33,7 @@ router.post('/', function (req, res) {
 })
 
 router.get('/status', function (req, res) {
+  console.log(req.user);
   User.findById(req.user.id, 'applicationStatus', function (err, user) {
     if (err || !user) return res.status(404).send(err || 'No Info Found');
     res.status(200).send({applicationStatus: user.applicationStatus});

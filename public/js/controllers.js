@@ -55,12 +55,9 @@ module.controller('DashboardCtrl',
   }
 
   $scope.logout = function () {
-    UserService.logout()
-    .success(function() {
+    UserService.logout(function (err, logout) {
+      if (err) return console.log(err);
       $state.go('landingpage');
     })
-    .error(function(err) {
-
-    });
   }
 }])
